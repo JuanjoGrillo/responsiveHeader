@@ -1,0 +1,226 @@
+#navigation {
+    display: grid;
+    grid-template-columns: 6fr 1fr 1fr;
+    grid-template-areas: 
+    'logo hamburger-menu account'
+    'sections sections sections'
+    'social social social'
+    ;
+    padding: 0 2rem;
+    background-color: rgb(167, 205, 255);
+}
+.navegation__logo {
+    grid-area: logo;
+    align-self: center;
+    a {
+        img {
+            margin: 0 auto;
+            width: 6rem;
+        }
+    }
+}
+.button-hamburger {
+    grid-area: hamburger-menu;
+    margin-left: auto;
+    align-self: center;
+    margin-top: 0.4rem;
+    img {
+        width: 3rem;
+    }
+}
+.navegation__sections {
+    grid-area: sections;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    &__section {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0.5rem;
+        &__dropdown {
+            padding: 0.8rem 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img {
+                display: none;
+            }
+        }
+        &__menu {
+            margin: 0 auto;
+            li {
+                padding: 0.4rem 0;
+            }
+            height: 0;
+            overflow: hidden;
+        }
+    }
+}
+.navegation__social {
+    grid-area: social;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    img {
+        width: 2rem;
+    }
+}
+.navegation__account {
+    grid-area: account;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-left: auto;
+    padding-left: 2rem;
+    &__profile {
+        display: flex;
+        align-items: center;
+        &__photo {
+            width: 3rem;
+        }
+        &__name {
+            margin: 0 5%; 
+            text-align: center;
+            display: none;
+        }
+        &__arrow{ 
+            width: 1.5rem;     
+        }
+    }
+    &__options {
+        height: 0;
+        overflow: hidden;
+        li {
+            a {
+                display: block;
+                width: fit-content;
+                margin: 0 auto;
+            }
+            img {
+                width: 2rem;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 600px) {
+    #navegation {
+        display: flex;
+        align-items: center;
+    }    
+    .button-hamburger {
+        display: none;
+    }
+    .navegation__sections {
+        flex-direction: row;
+        margin: 0 auto;
+        &__section {
+            &__dropdown {
+                padding: initial;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1.5rem;
+                img {
+                    display: initial;
+                    width: 1.5rem;
+                    margin-top: -1rem;
+                }
+            }
+            &__menu {
+                li {
+                    padding: initial;
+                }
+                height: 0;
+                overflow: hidden;
+            }
+        }
+    }
+    .navegation__social {
+        width: 15%;
+        margin-right: 2rem;
+        padding: initial;
+    }
+    .navegation__account {
+        align-self: initial;
+        margin-left: initial;
+        padding-left: initial;
+        &__options {
+            display: none;
+            li a img {
+                width: 20%;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 630px) {
+    .navegation__sections {
+        &__section {
+            margin:0 1.4rem;
+        }
+    }
+    .navegation__social {
+        margin-right: 3rem;
+        img {
+            width: 2.5rem;
+        }
+    }
+}
+@media only screen and (min-width: 700px) {
+    .navegation__sections {
+        &__section {
+            margin: 0 1.6rem;
+            &__dropdown {
+                img {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 820px) {
+    .navegation__sections {
+        &__section {
+            margin: 0 1.6rem;
+            &__dropdown {
+                flex-direction: row;
+                margin-top: 0;
+                img {
+                    margin-top: 0;
+                }
+            }
+        }
+    }               
+}
+@media only screen and (min-width: 1024px) {
+    .navegation__logo {
+        a {
+            img {
+                width: 7rem;
+            }
+        }
+    }
+    .navegation__sections {
+        &__section {
+            margin: 0 2.5rem;
+        }
+    }
+    .navegation__account {
+        width: 15%;
+        &__profile {
+            &__photo {
+                width: 4rem;
+            }
+            &__name {
+                display: initial;
+            }
+        }
+    }
+    .navegation__social {
+        img {
+            width: 3rem;
+        }
+    }
+}
+

@@ -1,0 +1,14 @@
+{
+  "name": "responsiveheader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/styles.scss css/main.css -w"
+  },
+  "author": "grillo juan jose",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

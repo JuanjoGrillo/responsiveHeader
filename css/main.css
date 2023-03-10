@@ -1,0 +1,156 @@
+#navigation {
+  display: grid;
+  grid-template-columns: 6fr 1fr 1fr;
+  grid-template-areas: 'logo hamburger-menu account' 'sections sections sections' 'social social social';
+  padding: 0 2rem;
+  background-color: #a7cdff; }
+
+.navegation__logo {
+  grid-area: logo;
+  align-self: center; }
+  .navegation__logo a img {
+    margin: 0 auto;
+    width: 6rem; }
+
+.button-hamburger {
+  grid-area: hamburger-menu;
+  margin-left: auto;
+  align-self: center;
+  margin-top: 0.4rem; }
+  .button-hamburger img {
+    width: 3rem; }
+
+.navegation__sections {
+  grid-area: sections;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto; }
+  .navegation__sections__section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0.5rem; }
+    .navegation__sections__section__dropdown {
+      padding: 0.8rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .navegation__sections__section__dropdown img {
+        display: none; }
+    .navegation__sections__section__menu {
+      margin: 0 auto;
+      height: 0;
+      overflow: hidden; }
+      .navegation__sections__section__menu li {
+        padding: 0.4rem 0; }
+
+.navegation__social {
+  grid-area: social;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0; }
+  .navegation__social img {
+    width: 2rem; }
+
+.navegation__account {
+  grid-area: account;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-left: auto;
+  padding-left: 2rem; }
+  .navegation__account__profile {
+    display: flex;
+    align-items: center; }
+    .navegation__account__profile__photo {
+      width: 3rem; }
+    .navegation__account__profile__name {
+      margin: 0 5%;
+      text-align: center;
+      display: none; }
+    .navegation__account__profile__arrow {
+      width: 1.5rem; }
+  .navegation__account__options {
+    height: 0;
+    overflow: hidden; }
+    .navegation__account__options li a {
+      display: block;
+      width: fit-content;
+      margin: 0 auto; }
+    .navegation__account__options li img {
+      width: 2rem; }
+
+@media only screen and (min-width: 600px) {
+  #navegation {
+    display: flex;
+    align-items: center; }
+  .button-hamburger {
+    display: none; }
+  .navegation__sections {
+    flex-direction: row;
+    margin: 0 auto; }
+    .navegation__sections__section__dropdown {
+      padding: initial;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.5rem; }
+      .navegation__sections__section__dropdown img {
+        display: initial;
+        width: 1.5rem;
+        margin-top: -1rem; }
+    .navegation__sections__section__menu {
+      height: 0;
+      overflow: hidden; }
+      .navegation__sections__section__menu li {
+        padding: initial; }
+  .navegation__social {
+    width: 15%;
+    margin-right: 2rem;
+    padding: initial; }
+  .navegation__account {
+    align-self: initial;
+    margin-left: initial;
+    padding-left: initial; }
+    .navegation__account__options {
+      display: none; }
+      .navegation__account__options li a img {
+        width: 20%; } }
+
+@media only screen and (min-width: 630px) {
+  .navegation__sections__section {
+    margin: 0 1.4rem; }
+  .navegation__social {
+    margin-right: 3rem; }
+    .navegation__social img {
+      width: 2.5rem; } }
+
+@media only screen and (min-width: 700px) {
+  .navegation__sections__section {
+    margin: 0 1.6rem; }
+    .navegation__sections__section__dropdown img {
+      margin-left: 1rem; } }
+
+@media only screen and (min-width: 820px) {
+  .navegation__sections__section {
+    margin: 0 1.6rem; }
+    .navegation__sections__section__dropdown {
+      flex-direction: row;
+      margin-top: 0; }
+      .navegation__sections__section__dropdown img {
+        margin-top: 0; } }
+
+@media only screen and (min-width: 1024px) {
+  .navegation__logo a img {
+    width: 7rem; }
+  .navegation__sections__section {
+    margin: 0 2.5rem; }
+  .navegation__account {
+    width: 15%; }
+    .navegation__account__profile__photo {
+      width: 4rem; }
+    .navegation__account__profile__name {
+      display: initial; }
+  .navegation__social img {
+    width: 3rem; } }
